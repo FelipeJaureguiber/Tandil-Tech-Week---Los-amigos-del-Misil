@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
 
   <!-- ===== Header / Navbar ===== -->
   <header class="site-header" id="header">
@@ -73,8 +75,9 @@
           capital y estudiantes.
         </p>
 
-        <!-- Contador regresivo en tiempo real -->
-        <div class="countdown reveal" id="countdown" role="timer" aria-label="Cuenta regresiva al inicio del evento">
+        <!-- Contador regresivo en tiempo real al próximo evento -->
+        <div class="countdown reveal" id="countdown" role="timer" aria-label="Cuenta regresiva al próximo evento">
+          <p class="countdown-target" id="cd-target">Próximo evento</p>
           <div class="count-unit">
             <span class="count-value" id="cd-days">--</span>
             <span class="count-label">Días</span>
@@ -127,7 +130,7 @@
         </div>
 
         <!-- Día 1: Hacking Day -->
-        <div class="day-panel is-active" id="panel-day-1" role="tabpanel" aria-labelledby="tab-day-1">
+        <div class="day-panel is-active" id="panel-day-1" role="tabpanel" aria-labelledby="tab-day-1" data-stagger>
           <article class="talk reveal">
             <span class="talk-time">09:00</span>
             <div class="talk-body">
@@ -153,7 +156,7 @@
             <span class="talk-tag">Mentoría</span>
           </article>
           <article class="talk reveal">
-            <span class="talk-time">17:30</span>
+            <span class="talk-time">17:00</span>
             <div class="talk-body">
               <h3>Cierre de bandeja y premiación</h3>
               <p>Entrega de resultados, premios y closing con la comunidad.</p>
@@ -163,9 +166,9 @@
         </div>
 
         <!-- Día 2: Startup Day -->
-        <div class="day-panel" id="panel-day-2" role="tabpanel" aria-labelledby="tab-day-2" hidden>
+        <div class="day-panel" id="panel-day-2" role="tabpanel" aria-labelledby="tab-day-2" hidden data-stagger>
           <article class="talk reveal">
-            <span class="talk-time">10:00</span>
+            <span class="talk-time">09:00</span>
             <div class="talk-body">
               <h3>Bienvenida y opening talk</h3>
               <p>El estado del ecosistema tech regional y por qué construimos desde Tandil.</p>
@@ -181,7 +184,7 @@
             <span class="talk-tag">Charlas</span>
           </article>
           <article class="talk reveal">
-            <span class="talk-time">14:00</span>
+            <span class="talk-time">15:00</span>
             <div class="talk-body">
               <h3>Networking con founders y VC</h3>
               <p>Espacio abierto para conectar con fundadores, venture capital y estudiantes.</p>
@@ -189,7 +192,7 @@
             <span class="talk-tag">Networking</span>
           </article>
           <article class="talk reveal">
-            <span class="talk-time">17:00</span>
+            <span class="talk-time">19:00</span>
             <div class="talk-body">
               <h3>Closing: construyamos lo que viene</h3>
               <p>Cierre de la semana, próximos pasos y after informal.</p>
@@ -217,7 +220,7 @@
 
       <!-- Menú horizontal de trabajos (deslizable / arrastrable) -->
       <div class="work-menu">
-        <ul class="work-track" id="work-menu">
+        <ul class="work-track" id="work-menu" data-stagger>
           <li class="work-item">
             <a class="work-link reveal" href="https://hacktandil.org" target="_blank" rel="noopener noreferrer">
               <span class="work-index">01 · 2023</span>
@@ -326,7 +329,7 @@
           </div>
         </div>
 
-        <div class="sponsor-grid">
+        <div class="sponsor-grid" data-stagger>
           <a class="sponsor-card reveal" href="https://picante.fund" target="_blank" rel="noopener noreferrer">
             <span class="sponsor-type">VC Fund</span>
             <h3>Picante</h3>
